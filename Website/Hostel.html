@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header{
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/Hostel.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            
+        }
+
+        .hostel{
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            text-align: center;
+        }
+
+        .hostel h1{
+            font-size: 62px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .hostel p{
+            margin:10px;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /*about-hostel*/
+
+        .about-hostel{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .about-hostel h1{
+            font-size: 38px;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .about-hostel p{
+            color: black;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+        }
+
+        /*the-hostel*/
+
+        .the-hostel{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .the-hostel h1{
+            font-size: 36px;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .the-hostel p{
+            color: black;
+            font-size: 19px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+
+        }
+
+        /*girls hostel*/
+
+        .name{
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            border-radius: border-box;
+        }
+
+        .hostel-name h3{
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .name:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+
+        /*boys hostel*/
+
+        .name-b{
+            flex-basis: 50%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            border-radius: border-box;
+ 
+        }
+
+        .hostel-name-b h3{
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .name-b:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+
+        .hostel-name-b{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-around;
+        }  
+
+        .name-b table{
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0%;
+            
+        } 
+
+        .name-b td{
+            border-radius: 0.5rem;
+            padding: 4px;
+
+        }
+
+        td:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+
+
+        /*learn more*/
+
+        .hostel-link{
+            padding:.7rem 3rem;
+            font-size: 1rem;
+            color:#fff;
+            background:var(--gradient);
+            border-radius: 5rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            box-shadow: 0 .1rem .3rem rgba(0,0,0,0);
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }  
+
+        .btn{
+            padding:.4rem 2rem;
+            font-size: 1rem;
+            color:rgb(0, 0, 0);
+            background: #fff3f3;
+            border-radius:5rem;
+            border-color: #fff3f3;
+            margin-top: 1rem;
+            cursor: pointer;
+            box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .btn:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+        
+
+        /* footer */
+
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+
+        .footer h4{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .icons .fa{
+            font-size: 18px;
+            margin: 0 13px;
+            line-height: 0.02;
+            cursor: pointer;
+            padding: 18px 0;
+            color: black; 
+        }
+
+        .icons a{
+            text-decoration: none;
+            text-decoration-color: black;
+        }
+
+                
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(4, 9, 30, 0.7);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: flex;
+            justify-content: space-around;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a img{
+            float: left;
+            display: none;
+            color: #f2f2f2;
+            padding: 1px 1px;
+            text-decoration: none;
+        }
+
+        .topnav img {
+            padding: 0;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #fff3f3;
+            color: black;}       
+
+
+
+        @media(max-width: 700px){
+
+            .hostel h1{
+                font-size: 25px;
+            }
+
+            .hostel p{
+                margin:10px;
+                font-size: 15px;
+            }
+
+            .hostel-name{
+                flex-direction: column;
+            }
+
+           .hostel-name-b{
+                margin-top: 5%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-content: center;
+
+            } 
+
+            .name-b table{
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                align-self: center;            
+            }  
+
+            /*about-hostel*/
+
+            .about-hostel h1, .the-hostel h1{
+                font-size: 25px;
+            }
+
+            .about-hostel p, .the-hostel p{
+                font-size: 17px;
+            }
+
+            /* navigation */
+
+            .topnav a{
+                padding: 10px 2px;
+                font-size: 13px;
+            }
+
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <section class="header">
+
+        <div class="hostel">
+            <h1>Experience the best Hostel life</h1>
+            <p>Enjoy the journey of your college life in healthy and prosperous environment</p>
+        </div>
+
+    </section>
+
+    <!-- navigation tab-->
+
+
+    <div class="topnav"> 
+        <a href="Home.html">Home</a>
+        <a href="Hostel.html">Hostel</a>
+        <a href="Sports.html">Sports</a>
+        <a href="Home.html #departments">Departments</a>
+        <a href="contact.html">Contact Us</a>
+        
+    </div>
+
+
+    <!-- About hostel-->
+
+    <section class="for-bgcolor">
+
+        <section class="about-hostel">
+
+            <h1>OUR HOSTELS</h1>
+            <p>The Institute has nine boys Hostels and three girls hostels. All equipped with full
+                facilities of electricity,<br> washroom, wifi, elevator etc. The lush green environment
+                provides fresh air. <br> Hostels are clean and hygenic.
+            </p>
+        </section>
+
+
+        <!-- girls hostel -->
+
+        <section class="the-hostel">
+
+            <h1>GIRLS HOSTEL</h1>
+            <p>The Institute girls hostel namely Alaknanda Bhawan, Bhagirathi Bhawan and Cauvery Bhawan
+                have the total capacity of 610 seats for B. Tech and Post graduate students. All the
+                hostels are well maintained and equipped with the facilities.</p>
+
+            <div class="hostel-name">
+                <div class="name">
+                    <h3>Alaknanda Bhawan</h3>
+                    <p>Initially, in the year 1986, old block of Alaknanda Bhawan was established with 
+                        total capacity of 30 seats having 10 rooms in all. New block was added to it in 
+                        July 1990, having capacity of 90 seats, giving total capacity of Alaknanda Bhawan 
+                        as 120 seats. The hostel accommodates girls students of B. Tech 1st year. <br>
+
+                        There is one lady resident warden & one matron who are residing within the hostel 
+                        premises. Mess facility is available which is being run on cooperative basis, looked 
+                        after by one mess supervisor and other mess workers. There is Badminton court and I-net 
+                        centre. The hostel has its own office room equipped with computer and printer. <br>
+            
+                        Immediate medical attention is given to the students falling sick. Students have the 
+                        access to the hostel canteen and are provided with the facilities like water cooler, 
+                        water purifier system, deep freezer, common room equipped with furniture and colour TV and other.</p>
+
+                </div>
+
+                <div class="name">
+                    <h3>Cauvery Bhawan</h3>
+                    <p>Cauvery Bhawan, the newly constructed girl hostel at present is having 292 rooms (single seated). 
+                        Common room facilities include newspapers, magazines, indoor games and a color television set. 
+                        Hostel is equipped with intercom and BSNL landline facility and phone, free of cost for incoming 
+                        calls only. Hostel mess is run on co-operative basis with the assistance of the students in the 
+                        form of a mess committee under the overall supervision of MMCA, clerks and wardens. Membership 
+                        is compulsory for all students residing in the hostel. Students of the hostel are provided with 
+                        the facilities of deep freezer, water coolers and LPG connection managed by staff of the hostel. 
+                        All the rooms in the hostel have been provided with furniture, ceiling fan and WI-FI connection. 
+                        Cauvery bhawan is having its own canteen providing day to day use commodities and snacks, accessible 
+                        to all the girl students staying in the hostel.</p>
+
+                </div>
+
+                <div class="name">
+                    <h3>Bhagirathi Bhawan</h3>
+                    <p>Bhagirathi Bhawan, the second Girls Hostel in NIT, Kurukshetra, was established in the year 2006. The bhawan 
+                        comprises of four wings having total of 198 rooms (single seated) and it accommodates the post graduate 
+                        (M. Tech, MBA, MCA) students of NIT, Kurukshetra. It has big lawns covering the front and back portion of the 
+                        hostel. In addition to that it has different wings with a beautiful garden that is well maintained by the 
+                        gardeners. Furthermore bhawan has a well furnished COMPUTER ROOM (I-Net Centre) and T.V. ROOM within the premises. 
+                        Moreover, the LAN connection has also been set up for the convenience of the girls. Apart form the above said 
+                        facilities a CANTEEN is also there in the bhawan itself providing healthy hygienic food at reasonable rate. 
+                        Lots of construction has been done to provide the best ventilation in the mess kitchen. A clean furnished dining 
+                        space has been provided to the residents of the hostel</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- boys hostel-->
+
+        <section class="the-hostel">
+
+            <h1>BOYS HOSTEL</h1>
+            <p>NIT Kurukshetra has nine boys hostels. Three boys hostels are triple bedded and the rest are single bedded. All the rooms 
+                in Post-graduate hostel are single bedded. All the hostels are named alphabetically from A to I. all the names are having 
+                relevance to the characters of Mahabharta.Continuing this trend the new Mega boys Hostel(Hostel no.10 ) is also named 
+                alphabetically in the same series as 'Jagdishwar Bhawan' starting from 'J'.</p>
+
+            <div class="hostel-name-b">
+
+                <div class="name-b">   
+
+                    <table cellspacing="1" cellpadding="0" border="1" style="border-radius: 0.5rem;">
+
+                        <tbody>
+
+                            <tr>
+                                <td><h3>HOSTEL NO.</h3></td>
+                                <td><h3>HOSTEL NAME</h3></td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td>1</td>
+                                <td>Abhimanyu Bhawan</td>
+                            </tr>
+
+                            <tr>
+                                <td>2</td>
+                                <td>Bhishma Bhawan</td>
+                            </tr>
+
+                            <tr>
+                                <td>3</td>
+                                <td>Chakradhar Bhawan</td>
+                            </tr>     
+                            <tr>
+                                <td>4</td>
+                                <td>Dronacharya Bhawan</td>
+                            </tr>
+
+                            <tr>
+                                <td>5</td>
+                                <td>Eklavya Bhawan</td>
+                            </tr>
+
+                            <tr>
+                                <td>6</td>
+                                <td>Fanibhushan Bhawan</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Girivar Bhawan</td>
+                            </tr>
+
+                            <tr>
+                                <td>8</td>
+                                <td>Harihar Bhawan</td>
+                            </tr>
+
+                            <tr>
+                                <td>9</td>
+                                <td>Indivar Bhawan</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Mega Boys Hostel</td>
+                            </tr>
+                        
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- learn more -->
+
+        <section class="hostel-link">
+
+            <a href="http://nitkkr.ac.in/docs/hostel warden list.pdf" target="_blank"> <button class="btn">Learn More</button></a>
+
+        </section>
+
+        <!-- footer-->
+
+        <section class="footer">
+
+            <h4>About us</h4>
+            <p>NIT Kurukshetra is an Institute of national importance. <br>Providing quality and practical education since 1963</p>
+
+            <div class="icons">
+
+                <a href="https://www.youtube.com/channel/UCeNBt-YR8d6xpfGtna8-RSg" target="_blank"> <i class="fa fa-youtube"> </i> </a>
+                <a href="https://www.facebook.com/nit.kurukshetra.5" target="_blank"> <i class="fa fa-facebook"></i> </a>
+                <a href="https://twitter.com/NITKURUKSHETRA" target="_blank"> <i class="fa fa-twitter"> </i> </a>
+
+            </div>
+
+            <p>copyright @ Ghalib</p>
+
+        </section>
+
+    </section>
+    
+</body>
+</html>

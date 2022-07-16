@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header{
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(c1.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            
+        }
+
+        /* logo */
+
+        .logo{
+            display: flex;
+            align-content: center;
+            align-content: center;
+            justify-content: center;
+            padding-top: 5%;
+        }
+
+        .hostel{
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            text-align: center;
+        }
+
+        .hostel h1{
+            font-size: 62px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .hostel p{
+            margin:10px;
+            font-size: 26px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /*about-hostel*/
+
+        .about-hostel{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .about-hostel h1{
+            font-size: 38px;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .about-hostel p{
+            color: black;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 25px;
+            padding: 10px;
+
+        }
+
+        .about-hostel ul{
+            padding-top: 0px;
+        }
+
+        .about-hostel li{
+            font-size: 25px;
+        }
+
+        .about-hostel li p{
+            font-size: 22px;
+        }
+
+
+        /*the-hostel*/
+
+        .the-hostel{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 20px;
+            
+        }
+
+        .the-hostel h1{
+            font-size: 36px;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+            padding-bottom: 0px;
+        }
+
+        .the-hostel p{
+            color: black;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 25px;
+            padding: 10px;
+
+        }
+
+        .hostel-name{
+            margin-top: 5%;
+            display: flex;
+            flex-basis: 27%;
+            justify-content: space-between;
+            justify-content: space-evenly;
+        }  
+
+        /*girls hostel*/
+
+        .name{
+            flex-basis: 27%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            border-radius: border-box;
+        }
+
+        .hostel-name h3{
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .name:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+
+        /*boys hostel*/
+
+        .name-b{
+            flex-basis: 50%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            border-radius: border-box;
+ 
+        }
+
+        .hostel-name-b h3{
+            text-align: center;
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .name-b:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+
+        .hostel-name-b{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-around;
+        }  
+
+        .name-b table{
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0%;
+            
+        } 
+
+        .name-b td{
+            border-radius: 0.5rem;
+            padding: 5px 7px;
+
+        }
+
+        td:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+
+
+        /*learn more*/
+
+        .hostel-link{
+            padding:.7rem 3rem;
+            font-size: 1rem;
+            color:#fff;
+            background:var(--gradient);
+            border-radius: 5rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            box-shadow: 0 .1rem .3rem rgba(0,0,0,0);
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }  
+
+        .btn{
+            padding:.4rem 2rem;
+            font-size: 1rem;
+            color:rgb(0, 0, 0);
+            background: #fff3f3;
+            border-radius:5rem;
+            border-color: #fff3f3;
+            margin-top: 1rem;
+            cursor: pointer;
+            box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .btn:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+        
+
+        /* footer */
+
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+
+        .footer h4{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .icons .fa{
+            font-size: 18px;
+            margin: 0 13px;
+            line-height: 0.02;
+            cursor: pointer;
+            padding: 18px 0;
+            color: black; 
+        }
+
+        .icons a{
+            text-decoration: none;
+            text-decoration-color: black;
+        } 
+
+                
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(4, 9, 30, 0.7);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: flex;
+            justify-content: space-around;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a img{
+            float: left;
+            display: none;
+            color: #f2f2f2;
+            padding: 1px 1px;
+            text-decoration: none;
+        }
+
+        .topnav img {
+            padding: 0;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #fff3f3;
+            color: black;}       
+
+
+
+        @media(max-width: 700px){
+
+            .hostel h1{
+                font-size: 25px;
+            }
+
+            .hostel p{
+                margin:10px;
+                font-size: 15px;
+            }
+
+            .hostel-name{
+                flex-direction: column;
+            }
+
+           .hostel-name-b{
+                margin-top: 5%;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                align-content: center;
+
+            } 
+
+            .name-b table{
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                align-self: center;
+            
+            }  
+
+
+            /*about-hostel*/
+
+
+            .about-hostel h1, .the-hostel h1{
+                font-size: 25px;
+            }
+
+            .about-hostel p, .the-hostel p{
+                font-size: 17px;
+            }
+
+            /* navigation */
+
+            .topnav a{
+                padding: 10px 2px;
+                font-size: 13px;
+            }
+
+
+        }
+
+        @media(max-width: 600px){
+
+            .logo{
+                padding-top: 10%;
+            }
+        }
+
+    </style>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+        var images = ["c1.png", "c2.jpg", "c3.jpg", "c4.jpeg", "c5.jpg"];
+        $(function () {
+            var i = 0;
+            $("#change").css("background-image", "linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/" + images[i] + ")");
+            setInterval(function () {
+                i++;
+                if (i == images.length) {
+                    i = 0;
+                }
+                $("#change").fadeOut("fast", function () {
+                    $(this).css("background-image", "linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/" + images[i] + ")");
+                    $(this).fadeIn("fast");
+                });
+            }, 4000);
+        });
+    </script>
+
+    </head>
+
+
+<body>
+
+    <div class="header" id="change">
+
+        <nav class="logo">
+            <img src="images/logo.png" alt="" style="max-width: 30%; display: flex; align-content: center; align-self: center;">
+        </nav>
+
+        <div class="hostel">
+            <h1>WELCOME TO NIT KURUKSHETRA</h1>
+            <p>Explore infinite possibilities with us</p>
+        </div>
+
+    </div>
+
+    <!-- navigation tab -->
+
+    <div class="topnav"> 
+        <a href="Home.html">Home</a>
+        <a href="Hostel.html">Hostel</a>
+        <a href="Sports.html">Sports</a>
+        <a href="#departments">Departments</a>
+        <a href="contact.html">Contact Us</a>
+        
+    </div>
+
+
+    <!-- About hostel-->
+
+    <section class="for-bgcolor">
+
+        <section class="about-hostel">
+
+            <h1>ABOUT US</h1>
+            <p>National Institute of Technology Kurukshetra (NIT Kurukshetra or NITKKR) is a public technical 
+                and research university located in Kurukshetra, Haryana. In December 2008, it was accredited with the 
+                status of Institute of National Importance (INI). It is one of the 30 National Institutes of 
+                Technology established and administered by Government of India. It runs undergraduate and 
+                postgraduate in programme Engineering and Doctor of Philosophy programme in Engineering, 
+                Sciences and Humanities.
+            </p>
+        </section>
+
+
+        <!-- girls hostel -->
+
+        <section class="the-hostel">
+
+            <h1>Vision and Mission</h1>
+
+            <div class="about-hostel">
+                
+                        <ul>
+                            <li><p> To be a role-model in technical education and research, responsive to global challenges.</p></li>
+                            <li><p> To impart quality technical education that develops innovative professionals and entrepreneurs.</p></li>
+                            <li><p> To undertake research that generates cutting-edge technologies and futuristic knowledge, focusing on the socio-economic needs</p></li>
+                        </ul>
+            
+            </div>
+            
+
+        </section>
+
+        <!-- infrastructure -->
+
+        <section class="the-hostel">
+
+            <h1>INSTITUTE INFRASTRUCTURE</h1>
+            <p>The Institute girls hostel namely Alaknanda Bhawan, Bhagirathi Bhawan and Cauvery Bhawan
+                have the total capacity of 610 seats for B. Tech and Post graduate students. All the
+                hostels are well maintained and equipped with the facilities.</p>
+
+            <div class="hostel-name">
+                <div class="name">
+                    <h3>Library Facilities</h3>
+                    <p>The library is housed in a separate building with a covered area of 3600 sq.m. The 
+                        library contains 100000 books, 6028 back volumes and 3659 e-books. The library subscribes 
+                        to 158 prints and approximately 2800 online journals in the fields of science, management 
+                        and technology. The library remains accessible to its users 24 x 7.</p>
+
+                </div>
+
+                <div class="name">
+                    <h3>Computing Facilities</h3>
+                    <p>The Centre of Computing and Networking (CCN) is the centralized facility for students, faculty 
+                        and staff of the institute. It has been provided with 24 hours internet facility with a 2 Mbps 
+                        leased line. NITK believes that information technology forms an integral part of management. The 
+                        lab is equipped with the latest hardware.</p>
+
+                </div>
+
+                <div class="name">
+                    <h3>Senate Hall</h3>
+                    <p>NITK has a state-of-the-art Senate Hall. It is an aesthetically designed and convenient located conference-
+                        cum-canteen facility.The senate hall makes the institute well-equipped to hold conferences, seminars, workshops, 
+                        etc. All the lectures of guest faculty and corporate managers are arranged here. The Training and Placement Cell 
+                        is also housed here.</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- boys hostel-->
+
+        <section class="the-hostel" id="departments">
+
+            <h1>DEPARTMENTS</h1>
+            <p>NIT Kurukshetra offers various programmes in different departments. All department has shown 
+                exponential growth in terms of modernization of the existing laboratories and establishment 
+                of new laboratories equipped with state-of-the-art facilities, curriculum development in 
+                consonance with the industrial needs, placement of the students, and research papers 
+                publication of the faculty members</p>
+
+            <div class="hostel-name-b">
+
+                <div class="name-b">   
+
+                    <table cellspacing="1" cellpadding="0" border="1" style="border-radius: 0.5rem;">
+
+                        <tbody>
+
+                            <tr>
+                                <td><h3>ENGINEERING DISCIPLINE</h3></td>
+                                <td><h3>SEATS</h3></td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td>Electronics & Communication</td>
+                                <td>139</td>
+                            </tr>
+
+                            <tr>
+                                <td>Computer Engineering</td>
+                                <td>92</td>
+                            </tr>
+
+                            <tr>
+                                <td>Information Technology</td>
+                                <td>92</td>
+                            </tr>     
+                            <tr>
+                                <td>Mechanical Engineering</td>
+                                <td>139</td>
+                            </tr>
+
+                            <tr>
+                                <td>Civil Engineering</td>
+                                <td>139</td>
+                            </tr>
+
+                            <tr>
+                                <td>Electrical Engineering</td>
+                                <td>139</td>
+                            </tr>
+                        
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- admission info -->
+
+        <section class="hostel-link">
+
+            <a href="https://jeemain.nta.nic.in/webinfo2021/Page/Page?PageId=1&LangId=P" target="_blank"> <button class="btn"> Admission Info </button> </a>
+
+        </section>
+
+        <!-- contact us -->
+
+        <section class="hostel-link">
+
+            <a href="contact.html"> <button class="btn">Contact Us</button></a>
+
+        </section>
+
+        <!-- footer-->
+
+        <section class="footer">
+
+            <h4>About us</h4>
+            <p>NIT Kurukshetra is an Institute of national importance. <br>Providing quality and practical education since 1963</p>
+
+            <div class="icons">
+
+                <a href="https://www.youtube.com/channel/UCeNBt-YR8d6xpfGtna8-RSg" target="_blank"> <i class="fa fa-youtube"> </i> </a>
+                <a href="https://www.facebook.com/nit.kurukshetra.5" target="_blank"> <i class="fa fa-facebook"></i> </a>
+                <a href="https://twitter.com/NITKURUKSHETRA" target="_blank"> <i class="fa fa-twitter"> </i> </a>
+
+            </div>
+
+            <p>copyright @ Ghalib</p>
+
+        </section>
+
+    </section>
+    
+</body>
+</html>
