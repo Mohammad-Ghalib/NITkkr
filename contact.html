@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+
+    <style>
+
+        :root{
+            --gradient:linear-gradient(90deg, #f1c40f, #f39c12);
+        }
+
+        *{
+            font-family: 'Open Sans', sans-serif;
+            margin:0; padding:0;
+            box-sizing: border-box;
+            border:none; outline: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: all .2s linear;
+        }
+
+        *::selection{
+            background:#f39c12;
+            color:#fff;
+        }
+
+        html{
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        section{
+            min-height: 100vh;
+            padding:1rem 7%;
+            padding-top:6rem;
+        }
+
+        .contact{
+            min-height: 100vh;
+            max-width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.4),rgba(4,9,30,0.4)),url(images/c4.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+
+        .heading{
+            color:#444;
+            padding:1rem;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        .contact .heading{
+            color:#fff;
+        }
+
+        .contact .row{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-wrap: wrap;
+            opacity: 70%;
+        }
+
+        .contact .row form{
+            flex:1 1 50rem;
+            background:#222;
+            padding:2rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+            align-items: flex-start;
+        }
+
+        .contact .row form .box{
+            height:5rem;
+            width:49%;
+            border:.1rem solid #eee;
+            padding:0 1rem;
+            margin:1rem 0;
+            font-size: 1.7rem;
+            color:#fff;
+            background:none;
+            text-transform: none;
+        }
+
+        .contact .row form .box:focus{
+            border-color: #f39c12;
+        }
+
+        .contact .row form .box::placeholder{
+            text-transform: capitalize;
+        }
+
+        .contact .row form .address{
+            height:15rem;
+            padding:1rem;
+            resize: none;
+            width:100%;
+        }
+
+        .contact .row form .btn:hover{
+            background:#fff;
+            color:#333;
+
+        }
+
+        .contact .row .image img{
+            height: 80vh;
+            margin-top: 2rem;
+        }
+
+        
+        .btn{
+            padding:.7rem 3rem;
+            font-size: 2rem;
+            color: blueviolet;
+            background:var(--gradient);
+            border-radius: 5rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .btn::before{
+            content: '';
+            position: absolute;
+            top:-1rem; left:-100%;
+            background:#fff9;
+            height:150%;
+            width:20%;
+            transform: rotate(25deg);
+            z-index: -1;
+        }
+
+        .btn:hover::before{
+            transition: .3s linear;
+            left: 120%;
+        }
+
+        .contact .row form .btn:hover{
+            background:#fff;
+            color: blueviolet;
+
+        }
+
+        .btn a:hover::before{
+            color: #fff;
+        }
+
+        .btn a:hover{
+            color: black;
+        } 
+
+
+        @media(max-width:700px){
+
+            form{
+                display: flex;
+                flex-direction: column;
+                justify-content: content;
+            }
+
+            .contact .row form .box{
+                height:5rem;
+                width:100%;
+                border:.1rem solid #eee;
+                padding:0 1rem;
+                margin:1rem 0;
+                font-size: 1.7rem;
+                color:#fff;
+                background:none;
+                text-transform: none;
+            }
+
+            .contact .row form .address{
+                height:15rem;
+                padding:1rem;
+                resize: none;
+                width:100%;
+            }
+
+            .row{
+                display: flex;
+                justify-self: center;
+                justify-content: center;
+                justify-items: center;
+                align-content: center;
+                align-self: center;
+            }
+
+            form{
+                
+                justify-self: center;
+                justify-content: center;
+                justify-items: center;
+                align-content: center;
+                align-self: center;
+            }
+
+            .btn{
+                display: flex;
+                align-self: center;
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- contact section starts  -->
+
+    <section class="contact" id="contact">
+
+        <h1 class="heading" style="font-family: 'Courier New', Courier, monospace; color: rgb(235, 231, 8);">Contact Us</h1>
+        
+        <div class="row">
+        
+            <form action="" method="POST">
+                <input type="text" placeholder="full name" class="box" required>
+                <input type="email" placeholder="your email" class="box" required>
+                <input type="text" placeholder="father's name" class="box" required>
+                <input type="number" placeholder="your number" class="box" required>
+                <textarea name="" id="" cols="30" rows="10" class="box address" placeholder="your address" required></textarea>
+                <input type="submit" class="btn" value="send now">
+                <p class="btn" style="justify-self: right;"> <a href="Home.html" style="text-decoration: none; color: blueviolet;">Back</a> </p>
+            </form>
+        
+        </div>
+        
+    </section>
+
+</body>
+
+</html>

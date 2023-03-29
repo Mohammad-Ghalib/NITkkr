@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .header{
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/sports.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            
+        }
+
+        .hostel{
+            width: 90%;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            text-align: center;
+        }
+
+        .hostel h1{
+            font-size: 62px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .hostel p{
+            margin:10px;
+            font-size: 22px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        /*about-hostel*/
+
+        .about-hostel{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .about-hostel h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+
+        .about-hostel p{
+            color: black;
+            font-size: 25px;
+            font-weight: 300;
+            line-height: 22px;
+            padding: 10px;
+            line-height: 1.4;
+       }
+
+        /*the-hostel*/
+
+        .the-hostel{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .the-hostel h1{
+            font-size: 36px;
+            font-weight: 600;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .the-hostel p{
+            color: black;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 26px;
+            padding: 10px;
+
+        }
+
+        .hostel-name{
+            margin-top: 5%;
+            display: flex; 
+            justify-content: space-around;
+        }  
+
+        /*girls hostel*/
+
+        .hostel-name h3{
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        /* gallery */
+
+        .gallery{
+            flex-basis: 31%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            border-radius: border-box;
+        }
+
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        } 
+
+        div.gallery:hover {
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .gallery-pool{
+            flex-basis: 3%;
+            background: #fff3f3;
+            border-radius: 10px;
+            margin-bottom: 5%;
+            padding: 20px 12px;
+            border-radius: border-box;
+        }
+
+        div.gallery-pool img {
+            max-width: 100%;
+            height: auto; 
+            border-radius: 0.5rem;
+        }
+
+        .gallery-pool .desc{
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .hostel-name-pool{
+            margin-top: 5%;
+            display: flex; 
+            justify-content: space-around;
+        }
+
+
+        /*learn more*/
+
+        .hostel-link{
+            padding:.7rem 3rem;
+            font-size: 1rem;
+            color:#fff;
+            background:var(--gradient);
+            border-radius: 5rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            box-shadow: 0 .1rem .3rem rgba(0,0,0,0);
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }  
+
+        .btn{
+            padding:.4rem 2rem;
+            font-size: 1rem;
+            color:rgb(0, 0, 0);
+            background: #fff3f3;
+            border-radius:5rem;
+            border-color: #fff3f3;
+            margin-top: 1rem;
+            cursor: pointer;
+            box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .btn:hover{
+            box-shadow: 0 0 20px 0px rgba(0,0,0,0.4);
+        }
+        
+
+        /* footer */
+
+        .footer{
+            width: 100%;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 14px;
+        }
+
+        .footer h4{
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .icons .fa{
+            font-size: 18px;
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+            color: black;    
+        }
+
+        .icons a{
+            text-decoration: none;
+            text-decoration-color: black;
+        }
+
+                
+        /* Style the top navigation bar */
+        .topnav {
+            overflow: hidden;
+            background-color: rgba(4, 9, 30, 0.7);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Style the topnav links */
+        .topnav a {
+            float: left;
+            display: flex;
+            justify-content: space-around;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .topnav a img{
+            float: left;
+            display: none;
+            color: #f2f2f2;
+            padding: 1px 1px;
+            text-decoration: none;
+        }
+
+        .topnav img {
+            padding: 0;
+        }
+
+        /* Change color on hover */
+        .topnav a:hover {
+            background-color: #fff3f3;
+            color: black;}       
+
+
+        @media(max-width: 700px){
+
+            .hostel h1{
+                font-size: 25px;
+            }
+
+            .hostel p{
+                margin:10px;
+                font-size: 15px;
+            }
+
+            .the-hostel{
+                flex-direction: column;
+                justify-content: center;
+                justify-self: center;
+                align-self: center;
+            }
+
+            .name{
+                display: flex;
+                align-content: center;
+                align-self: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            /*about-hostel*/
+
+            .about-hostel h1, .the-hostel h1{
+                font-size: 25px;
+            }
+
+            .about-hostel p, .the-hostel p{
+                font-size: 17px;
+            }
+
+            /* navigation */
+
+            .topnav a{
+                padding: 10px 2px;
+                font-size: 13px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <section class="header">
+
+        <div class="hostel">
+            <h1>Unleash the champ in you</h1>
+            <p>Sports for all round development and stress busting</p>
+        </div>
+
+    </section>
+
+    <!-- navigation tab-->
+
+    <div class="topnav"> 
+        <a href="Home.html">Home</a>
+        <a href="Hostel.html">Hostel</a>
+        <a href="Sports.html">Sports</a>
+        <a href="Home.html #departments">Departments</a>
+        <a href="contact.html">Contact Us</a>
+        
+    </div>
+
+
+    <!-- About hostel-->
+
+    <section class="for-bgcolor">
+
+        <section class="about-hostel">
+
+        <!--    <h1>OUR HOSTELS</h1> -->
+            <p>The engineering Curriculum requires dedicated and sustained efforts from every student.  As a result, 
+                students remain busy with studies throughout the year. Nevertheless,  realizing the importance 
+                of sorts and game in the overall development of the  students, sport facilities are provided to 
+                students to the maximum possible  extent. The Institute lays adequate emphasis on student’s 
+                participation in  various outdoor and indoor games and track and field sports.
+            </p>
+        </section>
+
+
+        <!-- girls hostel -->
+
+        <section class="the-hostel">
+
+            <h1>SPORTS FACILITIES</h1>
+            <p>The Institute provides specialised infrastructure and professional coaches to guide them in numerous sports. 
+                It has specially designed courts for each sport such as a Standard 400 meter track, swimming pool, basketball 
+                courts, cricket ground, football ground, tennis courts, Badminton court, kabaddi courts, volleyball court,  
+                indoor sports facilities for gymnastics, table tennis, chess and more. The institute has professional coaches 
+                who help to not only improve the physical aspect of the sport but also the mental side of things.</p>
+
+                <div class="hostel-name">
+
+                    <div class="name">
+
+                        <div class="gallery">
+
+                            <a target="_blank" href="images/400m-track.png">
+                            <img src="images/400m-track.png" alt="Track" width="300" height="100">
+                            </a>
+                            <div class="desc">Standard track</div>
+
+                        </div>
+                        
+                        <div class="gallery">
+                            <a target="_blank" href="images/basketball.png">
+                            <img src="images/basketball.png" alt="Basketball" width="300" height="200">
+                            </a>
+                            <div class="desc">Basketball court</div>
+
+                        </div>
+                        
+                        <div class="gallery">
+                            <a target="_blank" href="images/chess.png">
+                            <img src="images/chess.png" alt="Championship" width="300" height="200">
+                            </a>
+                            <div class="desc">Chess championships</div>
+
+                        </div>
+ 
+                        <div class="gallery">
+                            <a target="_blank" href="images/discuss-throw.png">
+                            <img src="images/discuss-throw.png" alt="Athletic ground" width="300" height="200">
+                            </a>
+                            <div class="desc">Athletics ground</div>
+
+                        </div> 
+
+                    </div>
+
+                </div>
+
+
+                <h1>SWIMMING POOL</h1>
+                <p>NIT Kurukshetra now has a Swimming Pool of International Standards, 50 Mts. x 25 Mts. Size, with 90 Cm. 
+                    depth at shallow end and 5 Mts. depth at deeper end. Apart from this it is equipped with Three Spring 
+                    Boards for Diving   at 3 Mts., 5 Mts. and 7 Mts height simultaneously. It is provided with Anti-wave 
+                    Lane markers to conduct competitions with Portable Take off Boards with Fiber of Olympic type where 60 
+                    to 70 people can be accommodated at a time.</p>
+
+                
+                <div class="hostel-name-pool">
+
+                    <div class="name-pool">
+
+                        <div class="gallery-pool">
+                            <a target="_blank" href="images/pool.jpg">
+                            <img src="images/pool.jpg" alt="Pool" width="600" height="400">
+                            </a>
+                            <div class="desc">Swimming pool</div>
+
+                        </div> 
+
+                    </div>
+
+                </div>
+            
+        </section>
+
+
+        <!-- pool membership -->
+
+        <section class="hostel-link">
+
+            <div> <a href="https://nitkkr.ac.in/docs/Membership_Application_Students-22-2017.pdf" target="_blank"> <button class="btn">Pool Membership</button></a> </div>
+
+        </section>
+
+        <!-- footer-->
+
+        <section class="footer">
+
+            <h4>About us</h4>
+            <p>NIT Kurukshetra is an Institute of national importance. <br>Providing quality and practical education since 1963</p>
+
+            <div class="icons">
+
+                <a href="https://www.youtube.com/channel/UCeNBt-YR8d6xpfGtna8-RSg" target="_blank"> <i class="fa fa-youtube"> </i> </a>
+                <a href="https://www.facebook.com/nit.kurukshetra.5" target="_blank"> <i class="fa fa-facebook"></i> </a>
+                <a href="https://twitter.com/NITKURUKSHETRA" target="_blank"> <i class="fa fa-twitter"> </i> </a>
+
+            </div>
+
+            <p>copyright @ Ghalib</p>
+
+        </section>
+
+    </section>
+    
+</body>
+</html>
